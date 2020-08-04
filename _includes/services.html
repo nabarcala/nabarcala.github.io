@@ -1,0 +1,27 @@
+<!-- Services Offered -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="small-header">Services</h5>
+            <h3 class="big-header">What I Can Offer</h3>
+        </div>
+        <div class="services-main">
+
+            {% for service in site.data.services %}
+            <div class="single-service">
+                <div class="bg"></div>
+                <div class="services-inner">
+                    <span class="service-python"><i class="fab fa-python"></i></span>
+                    <h3>{{ service.title }}</h3>
+                    <p> {{ service.description }} </p>
+                    {% if service.link %}
+                        <a href="{{ service.link }}">{{ service.link-text }}</a>
+                    {% else %}
+                        <a>{{ service.link-text }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

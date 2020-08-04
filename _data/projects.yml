@@ -1,0 +1,21 @@
+
+
+- title: Senior Capstone Project
+  img: img/soff
+  website:
+  github: https://github.com/nabarcala/SOFF
+  description: Part of a team of three that created a fruit-slicing device equipped with a fruit identifier and ripeness detection system that is controlled by an accompanying Android app. Retrained a ResNet18 neural network to classify a specific set of fruits using an NVIDIA Jetson Nano, NVIDIA TensorRT, and PyTorch.
+  used:
+    - tool: Python
+    - tool: Java
+    - tool: PyTorch
+
+- title: Lego Pill Sorter
+  img: img/pill-sorter 
+  website:
+  github: https://github.com/nabarcala/PillSort
+  description: Participated in a three-person team to plan and create a pill sorter out of Legos. Programmed a Raspberry Pi to use a webcam to sort pills based on the color using OpenCV. Created a ramp on the device with two exits for the colored pills to roll through.
+  used:
+    - tool: Python
+    - tool: OpenCV
+    - tool: Raspberry Pi

@@ -1,0 +1,58 @@
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="small-header"> Portfolio </h5>
+            <h3 class="big-header"> Check Out My Projects </h3>
+        </div>
+
+        {% if site.data.projects %}
+        {% for project in site.data.projects %}
+
+        <div class="portfolio-container">
+            <img src="{{ site.baseurl }}/{{ project.img }}.jpg" alt="">
+            <div class="project">
+                <div class="project-i">
+                    <h3>{{ project.title }}</h3>
+                    <ul class="links-project">
+                        {% if project.website %}
+                            <a class="border-pink" href="{{ project.website }}" class="link">Live</a>
+                        {% endif %}
+                        {% if project.github %}
+                            <a class="border-pink" href="{{ project.github }}" class="link">GitHub</a>
+                        {% else %}
+                        <span class="border-pink" class="link">Comming Soon</a>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="project-d">
+                    <p> {{ project.description }} </p>
+                    {% if project.used %}
+                    <ul class="project-tools">
+                        {% for tool in project.used %}
+                        <span class="grey-pill">{{ tool.tool }}</span>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        {% endfor %}
+        {% else %}
+
+        <div class="text-center">
+            <h3 class="text-center"> Unable to get project data </h3>
+        </div>
+
+        {% endif %}
+
+        
+
+        </div> <!-- End of portfolio wrapper -->
+    </div> 
+
+    
+
+</section>

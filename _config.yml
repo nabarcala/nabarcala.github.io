@@ -1,0 +1,36 @@
+
+name: Natacha Barcala
+title: Brittany Chiang | Front End Software Engineer
+description: 
+# url: 
+# baseurl: "/v2"
+email: nabarcala@gmail.com
+
+cover: 
+logo: 
+resume: 
+
+social:
+  - title: email
+    url: mailto:nabarcala@gmail.com
+  # - title: etsy
+  #   url: https://www.etsy.com/shop/TachasWorkshop
+  # - title: github
+  #   url: https://github.com/bchiang7
+  # - title: linkedin
+  #   url: https://www.linkedin.com/in/bchiang7
+
+# exclude:
+#   - "Gemfile"
+#   - "Gemfile.lock"
+#   - "*.gemspec"
+#   - "README.md"
+#   - "node_modules"
+#   - "build"
+#   - "gulpfile.js"
+#   - "package.json"
+
+# keep_files:
+#   - "CNAME"
+#   - ".git"
+#   - ".gitignore"

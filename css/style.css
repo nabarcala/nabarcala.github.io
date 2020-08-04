@@ -1,0 +1,728 @@
+
+/*-------- CSS Variables --------*/
+/* @import "partials/_variables.css"; */
+
+/*-------- CSS Variables --------*/
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    --roboto: 'Roboto', sans-serif;
+}
+
+/*-------- Colors --------*/
+:root { 
+    --background-color: #222831;
+    --background-dark: #1c2027;
+    --background-light: #333b47;
+    --highlight-color: #dc789d; 
+    --highlight-dark: #bd4a74;
+    --text-white: #fff;
+
+    --first-color: #f4cacb;
+    --second-color: #00537a;
+    --third-color: #6494ac;
+
+    --text-color1: #fedfdf;
+    --text-color2: #fef8f8;
+    --border-color: #999; 
+}
+
+/*-------- Fonts --------*/
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+}
+@media screen and (min-width: 768px){
+    :root {
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+
+/*-------- Global Classes --------*/
+
+a {
+    color: var(--highlight-color);
+}
+p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+.small-header {
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.3rem;
+}
+.big-header {
+    font-size: 2.5rem; 
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+}
+.text-center {
+    text-align: center;
+}
+.small-text {
+    font-size: .8rem;
+    line-height: 1.3rem;
+}
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
+
+
+/*-------- Layout --------*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+    background-color: transparent;
+}
+body {
+    font-family: var(--roboto);
+    font-size: var(--normal-font-size);
+    color: var(--text-color2);
+    background-color: var(--background-color);
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.container-fluid,
+.container-fluid h1,
+.container-fluid h2,
+.container-fluid h3,
+.container-fluid p,
+.container-fluid table,
+.container-fluid button,
+.container-fluid a { 
+    color: var(--text-white);
+}
+.border-pink {
+    border: 2px solid black;
+    border-radius: 3px;
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.border-pink:hover {
+    color: var(--text-white);
+    text-decoration: none;
+    background-color: var(--highlight-color);
+    transition: 0.3s ease-in-out;
+}
+.grey-pill {
+    border: 1px solid var(--background-light);
+    background-color: var(--background-light);
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+/*-------- Navbar Header --------*/
+.header-area {
+    justify-content: space-between; 
+}
+.navbar {
+    background-color: var(--background-dark);
+    padding: 1rem 6rem;
+}
+.navbar-brand {
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: var(--text-white); 
+    padding: .3rem .8rem;
+    text-align: center;
+}
+.nav-link {
+    color: var(--text-white);
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 770px) {
+    .nav-list {
+        display: flex;
+        padding-top: .3rem;
+        
+    }
+    .nav-item {
+        /* margin: 0 1rem; */
+        margin-right: 3rem;
+        /* margin-bottom: 0; */
+    }
+    
+    .nav-link:hover {
+        color: var(--highlight-color); 
+    }
+    .nav-link:hover::after {
+        /* position: absolute;
+        content: "";
+        width: 100%;
+        height: 0.18rem;
+        left: .8rem;
+        top: 2rem; */
+        color: var(--highlight-color);
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+
+
+/*-------- Scroll to Top --------*/
+#scroll-to-top {
+    font-size: 2rem;
+    position: fixed;
+    /* display: flex; */
+    right: 30px;
+    bottom: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--highlight-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
+    color: var(--text-white);
+    outline: none;
+    cursor: pointer;
+
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+#scroll-to-top.active {
+    background-color: var(--highlight-color);
+    bottom: 30px;
+    pointer-events: auto;
+    opacity: 1;
+}
+#scroll-to-top:active {
+    background-color: var(--highlight-dark);
+    color: var(--border-color);
+}
+#scroll-to-top i {
+    padding-top: .5rem;
+}
+
+
+/*-------- Banner --------*/
+.flexbox {
+    display: flex; 
+    height: 100%;
+}
+.content {
+    height: 100vh; 
+    margin: auto 2rem;
+}
+.span-6 {
+    flex-basis: 50%;
+}
+.about-desc {
+    display: flex;
+    text-align: justify;
+}
+.inner-desc {
+    margin: auto;
+    padding: 0 7rem;
+    padding-bottom: 20%;
+}
+.about-desc h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.about-desc h3{
+    /* font-size: 3.5rem; */
+    margin-bottom: .5rem;
+}
+/* .about-desc p{
+    font-size: 1rem;
+    line-height: 1.7rem;
+} */
+.span-6 img {
+    height: auto;
+    padding-top: 15%;
+    width: 100%;
+}
+
+
+
+/*-------- About Me --------*/
+.about-me {
+    background: var(--background-dark);
+    color: var(--text-white);
+    padding: 3rem 0;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-me-left {
+    padding-right: 3rem;
+}
+.about-me h5 {
+    color: var(--highlight-color);
+    margin-bottom: 1.3rem;
+    /* font-size: 1.2rem; */
+}
+.about-me-left h2 {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+}
+/* .about-me-left p {
+    line-height: 1.7rem;
+    font-size: 1rem;
+} */
+.about-me-right {
+    padding-left: 1rem;
+}
+.about-me-right h1 {
+    font-size: 2.5rem; 
+    margin-bottom: .7rem;
+}
+.about-me-right h2 {
+    font-size: 1.3rem;
+    color: var(--highlight-color);
+}
+
+
+
+/*-------- Services --------*/
+.services {
+    padding: 3rem 0;
+}
+.services-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.3rem;
+}
+.single-service {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+.single-service .services-inner,
+.single-service:hover .services-inner{
+    background: var(--background-dark);
+}
+.single-service.single-service .bg,
+.single-service:hover .bg {
+    position: absolute;
+    background-image: linear-gradient(30deg, #7b2fbe, #e75e90);
+    right: 6%;
+    bottom: 5%;
+    height: 80%;
+    width: 75%;
+    z-index: -0;
+}
+.single-service span {
+    font-size: 3rem;
+    color: var(--highlight-color);
+}
+.single-service h3 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+.single-service p {
+    margin-bottom: 1.2rem;
+}
+.single-service a {
+    font-size: 1rem;
+}
+.services-inner {
+    padding: 3rem 1.5rem;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+.services-inner a {
+    color: var(--highlight-color);
+}
+
+/*-------- Portfolio --------*/
+
+.portfolio-container {
+    margin-top: 5rem;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5rem;
+}
+.portfolio-container::after {
+    width: 100%;
+    content: "";
+    height: 2px;
+    /* border-bottom: 1px solid var(--background-color); */
+}
+hr {
+    height: 2px;
+    background-color: var(--background-color);
+}
+.portfolio-container img {
+    max-width: 100%;
+    max-height: 500px;
+    width: 100%;
+    display: block;
+    /* height: 200px; */
+    object-fit: scale-down; 
+}
+.project {
+}
+.project-i {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.project-i h3 {
+    /* text-align: left; */
+    float: left;
+}
+.links-project {
+    text-align: right;
+    margin-right: 1rem;
+}
+.links-project a,
+.links-project span {
+    padding: .6rem;
+    margin-left: .5rem;
+}
+.links-project a:hover {
+    color: var(--text-white);
+    text-decoration: none;
+    background-color: var(--highlight-color);
+    transition: 0.3s ease-in-out;
+}
+.project-d {
+    margin-top: 2rem;
+}
+
+
+
+
+/*-------- Portfolio --------*/
+.portfolio {
+    padding: 5rem 0rem;
+    width: 100%;
+    background: var(--background-dark);
+}
+.portfolio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 30px;
+    justify-content: center;
+
+}
+.project {
+    /* background-color: var(--background-color); */
+    /* align-items: center;
+    justify-content: center;
+    margin: 3rem 0; */
+    /* width: 70%;
+    margin: 0 auto;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+.thumbnail {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    transform: translate(0%, -100%);
+    transition: all .5s ease;
+    background: linear-gradient(rgba(0, 0, 0, .5) 80%, var(--background-color) 60%);
+    opacity: 0;
+}
+.project:hover .overlay {  
+    opacity: 1;
+    cursor: pointer;
+}
+.overlay .overlay-click i { 
+    text-decoration: none;
+    font-size: 1.5rem; 
+    align-content: center;
+    margin: 20% 0 0 47%;
+    color: var(--text-white);
+    cursor: pointer;
+}
+.overlay .overlay-click i:hover {
+    color: var(--highlight-color);
+}
+.overlay-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4.1rem;
+    
+}
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+.modal-content {
+    width: 600px;
+    height: 700px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+}
+.modal-title {
+    background-color: var(--background-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.project-title {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-white);
+}
+.modal-close {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px 0 0;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.modal-close i:hover {
+    color: var(--text-white);
+}
+.modal-data {
+    padding: 10px 20px;
+}
+.modal-thumbnail {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.project-description {
+    margin: 20px;
+    justify-content: center;
+}
+.project-info {
+    text-align: center;
+}
+.project-tools {
+    flex-direction: row;
+    align-self: flex-end;
+    margin: 2rem 0;
+}
+/* .project-tools span:hover {
+    background-color: var(--highlight-dark);
+    border-color: var(--highlight-dark);
+} */
+.project-tools span {
+    margin-right: .5rem;
+    font-size: .9rem;
+    padding: .5rem;  
+}
+.project-links {
+    flex-direction: row;
+    align-self: flex-end;
+    bottom: 0; 
+}
+.project-links .link:hover {
+    color: var(--text-white);
+}
+.link {
+    font-size: 1.6rem;
+    padding-right: 1rem; 
+}
+
+
+/*-------- Footer --------*/
+.footer {
+    background-color: var(--background-dark);
+    padding-bottom: 1rem;
+}
+.social-icons a {
+    font-size: 1.8rem;
+    margin: 1rem 2rem;
+    color: var(--border-color);
+}
+.social-icons a:hover {
+    color: var(--highlight-color);
+}
+.copyrights {
+    font-size: .8rem;
+    margin-top: 2rem;
+}
+
+
+/*-------- Media Queries --------*/
+@media only screen and (max-width: 1380px) {
+    .span-6 img {
+        padding-top: 30%;
+    }
+    .about-desc {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .content {
+        height: auto !important;
+    }
+    .about-desc {
+        margin-top: 5rem;
+    }
+    .span-6 img {
+        padding-top: 20%;
+    }
+    .inner-desc h3 {
+        font-size: 1.3rem;
+    }
+    .inner-desc h1 {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (max-width: 1035px) {
+    .services-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 990px) {
+    #scroll-to-top {
+        display: none;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-desc {
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: -3rem;
+    }
+    .inner-desc p {
+        text-align: center;
+    }
+    .content {
+        height: auto !important;
+    }
+    .about-me .small-header {
+        text-align: center;
+    }
+    .about-me-left,
+    .about-me-right {
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .about-me-left p,
+    .about-me-right p {
+        text-align: center;
+    }
+    .portfolio-slider {
+        width: 100%;
+    }
+    .project-tools {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project-tools span {
+        margin-bottom: .5rem;
+    }
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+    .project-info p {
+        font-size: 1rem;
+    }
+    .project-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project-img {
+        display: none;
+    }
+    .social-icons li {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 770px) {
+    .navbar {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 4.5rem;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        padding-right: 2rem;
+        background-color: var(--background-dark);
+        transition: .5s; 
+    }
+    .nav-item {
+        margin-bottom: 2rem;
+        margin: 2rem;
+    }
+    .nav-link {
+        position: relative;
+        color: var(--text-white);
+        font-size: 1.1rem;
+    }
+    .nav-link:hover {
+        position: relative;
+        color: var(--highlight-color);
+    }
+    .nav-link:hover::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 0.18rem;
+        left: 0;
+        top: 2rem;
+        background-color: var(--highlight-color);
+    }
+    
+    .nav-toggle {
+        color: var(--text-white);
+        font-size: 1.5rem;
+    }
+    .show {
+        right: 0;
+    }
+
+    .services-main {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
