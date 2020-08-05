@@ -1,0 +1,126 @@
+
+:root {
+    --bg-color: #2F3136;
+    --bg-light: #36393F;
+    --bg-dark: #202225;
+
+    --off-white: #edf0f1;
+    --white-white: #fff;
+
+    --highlight-color: #dc789d; 
+    --highlight-dark: #bd4a74;
+
+    --font-fam: "Montserrat", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*-------- Layout --------*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--white-white); 
+    box-sizing: border-box;
+    background-color: transparent;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+li, a, button {
+    font-family: var(--font-fam);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+
+/*-------- Navbar --------*/
+header {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: var(--bg-dark);
+}
+.logo {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-right: auto;
+}
+.logo-text {
+    cursor: pointer;
+    margin-right: auto;
+    padding-top: 7px;
+    font-family: var(--font-fam);
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--off-white);
+}
+nav {
+    justify-content: center;
+}
+.nav-links {
+    list-style: none; 
+    padding-top: 18px;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s; 
+    text-decoration: none;
+}
+.nav-links li a:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+.cta {
+    margin-left: 10px; 
+}
+button {
+    padding: 5px 20px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s; 
+}
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+
+/*-------- Banner --------*/
+.banner {
+    height: 95vh;
+    overflow: hidden; 
+    /* background-color: var(--bg-color); */
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    /* background: radial-gradient(ellipse at bottom, var(--bg-light) 0%, var(--bg-dark) 100%); */
+}
+.title {
+    text-align: center; 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    font-family: Lato;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 50px; 
+    letter-spacing: 10px;
+}
+
+/*-------- Layout --------*/
+
+/*-------- Layout --------*/
+
+/*-------- Layout --------*/
